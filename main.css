@@ -1,0 +1,15 @@
+form {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.memory-section {
+    width: 70%;
+}
+
+fieldset {
+    border: none;
+}

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CHIP‑8 Instruction–by–Instruction Simulation with Pseudo Code</title>
+        <link rel="stylesheet" href="./main.css" />
+        <link rel="stylesheet" href="./grid/grid.css" />
+    </head>
+
+    <body>
+        <section class="memory-section">
+            <form>
+                <fieldset>
+                    <label for="address">Address:</label>
+                    <input id="address" type="text" name="address" value="0"/>
+                </fieldset>
+    
+                <fieldset>
+                    <label for="cars">Columns:</label>
+                    <input id="memory-columns-setting" type="number" min="0"  name="cars" value="16"/>    
+                </fieldset>
+
+                <!-- <button type="submit"> Apply </button> -->
+            </form>
+            
+            <div id="memory-grid"></div>
+        </section>
+
+        <script src="./core/chip8.js" ></script>
+        <script src="./grid/grid.js" ></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
+
+
