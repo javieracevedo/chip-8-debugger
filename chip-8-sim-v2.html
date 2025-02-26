@@ -1,34 +1,43 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>CHIP‑8 Instruction–by–Instruction Simulation with Pseudo Code</title>
         <link rel="stylesheet" href="./main.css" />
         <link rel="stylesheet" href="./grid/grid.css" />
+        <link rel="stylesheet" href="./debugger.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
+        <header>
+            <h1>CHIP-8 Debugger</h1>
+            <p>Interactive debugger for CHIP-8 programs with instruction analysis</p>
+        </header>
+
         <section class="memory-section">
+            <h2>Memory View</h2>
             <form>
                 <fieldset>
-                    <label for="address">Address:</label>
-                    <input id="address" type="text" name="address" value="0"/>
+                    <label for="address">Jump to Address:</label>
+                    <input id="address" type="text" name="address" value="0x200" placeholder="hex address"/>
                 </fieldset>
     
                 <fieldset>
-                    <label for="cars">Columns:</label>
-                    <input id="memory-columns-setting" type="number" min="0"  name="cars" value="16"/>    
+                    <label for="memory-columns-setting">Columns:</label>
+                    <input id="memory-columns-setting" type="number" min="1" max="32" name="memory-columns" value="8"/>    
                 </fieldset>
-
-                <!-- <button type="submit"> Apply </button> -->
             </form>
             
             <div id="memory-grid"></div>
         </section>
 
-        <script src="./core/chip8.js" ></script>
-        <script src="./grid/grid.js" ></script>
+        <!-- JavaScript files -->
+        <script src="./core/chip8.js"></script>
+        <script src="./core/ui.js"></script>
+
+        <script src="./grid/grid.js"></script>
+        <script src="./debugger.js"></script>
         <script src="./main.js"></script>
     </body>
 </html>
-
-
